@@ -1,4 +1,4 @@
-#Exercise Tracker with MongoDB, Express.JS, React.JS and Node.JS.
+# Exercise Tracker with MongoDB, Express.JS, React.JS and Node.JS.
 
 This simple exercise tracker is created using the popular MERN Stack, using MongoDB as the No-SQL DataBase, Express.JS as the backend server, React.JS to create the frontend UI and UI components, and Node.JS for the Javascript runtime environment.
 This exercise tracker allows users to create various exercise logs, adding descriptions, images and durations for each exercise log. The data for each log is then sent to the MongoDB Mongoose Database by making GET/POST/DELETE requests through various routes defined in the Express.JS server.
