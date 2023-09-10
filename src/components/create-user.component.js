@@ -64,7 +64,7 @@ export default class CreateUser extends Component {
         })
 
         //http://localhost:5000/
-        axios.post('https://mern-exercise-tracker-ten.vercel.app/users/add', user)
+        axios.post('https://mern-exercise-tracker-five.vercel.app/users/add', user)
             .then(res => console.log(res.data));
     }
 
