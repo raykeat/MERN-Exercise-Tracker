@@ -83,7 +83,7 @@ function EditExercise () {
 
         //making axios post request to backend EXPRESS endpoints/routes, which then performs CRUD operations in MongoDB
         //http://localhost:5000/
-        axios.post(`https://mern-exercise-tracker-ten.vercel.app/exercises/update/${exercise.exerciseid}`,exercise)
+        axios.post(`https://mern-exercise-tracker-five.vercel.app/exercises/update/${exercise.exerciseid}`,exercise)
             .then(res => {
                 console.log(res.data);
                 setEdited(true);
