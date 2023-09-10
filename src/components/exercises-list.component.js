@@ -22,7 +22,7 @@ function ExercisesList() {
     //to get all the exercises saved in MongoDB and render them
     useEffect(() => {
         //http://localhost:5000/
-        axios.get('https://mern-exercise-tracker-ten.vercel.app/exercises/')
+        axios.get('https://mern-exercise-tracker-five.vercel.app/exercises/')
             .then(response => {
                 setExercises(response.data);
             })
@@ -35,12 +35,12 @@ function ExercisesList() {
 
     //function to delete post by sending axios delete request to backend Express server
     function DeletePost(exercise_id){
-        axios.delete(`https://mern-exercise-tracker-ten.vercel.app/exercises/${exercise_id}`)
+        axios.delete(`https://mern-exercise-tracker-five.vercel.app/exercises/${exercise_id}`)
             .then(response => {
                 console.log(response);
 
                 //to get new list of exercises after deleting an exercise
-                axios.get('https://mern-exercise-tracker-ten.vercel.app/exercises/')
+                axios.get('https://mern-exercise-tracker-five.vercel.app/exercises/')
                     .then(response => {
                         setExercises(response.data);
                     })
