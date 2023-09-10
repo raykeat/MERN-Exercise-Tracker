@@ -39,7 +39,8 @@ export default class CreateExercise extends Component {
     //constructor is called when instance of component is created but hasn't rendered for first time
     //componentDidMount is called immediately after component has rendered for the first time
     componentDidMount(){
-        axios.get('http://localhost:5000/users/')
+        //http://localhost:5000/
+        axios.get('https://mern-exercise-tracker-ten.vercel.app/users/')
             .then(response => {
 
                 if (response.data.length>0){
@@ -105,7 +106,8 @@ export default class CreateExercise extends Component {
 
 
         //making axios post request to backend EXPRESS endpoints/routes, which then performs CRUD operations in MongoDB
-        axios.post('http://localhost:5000/exercises/add',exercise)
+        //http://localhost:5000/
+        axios.post('https://mern-exercise-tracker-ten.vercel.app/exercises/add',exercise)
             .then(res => {
                 console.log(res.data);
                 this.setState({
