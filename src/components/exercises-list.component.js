@@ -108,7 +108,7 @@ function ExercisesList() {
                     </div>
                 </div>
 
-                {Exercises.map((exercise)=> (
+                {Exercises && Exercises.map((exercise)=> (
 
                 //unique key prop must be provided to each item when rendering a dynamic list in React
                 //as React uses keys to track which elements have been changed, thus allowing efficient updates 
