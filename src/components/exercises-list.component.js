@@ -108,7 +108,39 @@ function ExercisesList() {
                     </div>
                 </div>
 
-                
+                {Exercises && Exercises.map((exercise)=> (
+
+                //unique key prop must be provided to each item when rendering a dynamic list in React
+                //as React uses keys to track which elements have been changed, thus allowing efficient updates 
+                //of UI when list changes
+                <div className="card m-2" key={exercise._id}>
+                    <div className="row g-0">
+
+                        <div className="col-md-2">
+                            <img style={{height: '30vh', width: '13vw'}} src={exercise.imageurl} className="img-fluid rounded-start" />
+                        </div>
+
+                        <div className="col-md-10">
+                            <div className="card-body">
+                                <h5 className="card-title">{exercise.exercisename}</h5>
+                                <p className="card-text">
+                                    {exercise.description}
+                                </p>
+                                <p className="card-text">
+                                    <small className="text-muted">Posted on {exercise.date} by {exercise.username}</small>
+                                </p>
+                            </div>
+                            <div>
+                                <button onClick={()=>ViewPost(exercise)} type="button" className="display-btn btn btn-info">View Post</button>
+                                <button onClick={()=>EditPost(exercise)} type="button" className="display-btn btn btn-info">Edit Post</button>
+                                <button onClick={()=>DeletePost(exercise._id)} type="button" className="display-btn btn btn-primary">Delete Post</button>
+                            </div>
+            
+                        </div>
+
+                    </div>
+                </div>
+            ))}
 
             </div>
         </div>
