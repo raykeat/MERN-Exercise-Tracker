@@ -15,17 +15,12 @@ const port = process.env.PORT || 5000;
 
 
 const corsOptions = {
-  //https://mern-exercise-tracker-five.vercel.app
-  origin: [
-    'https://mern-exercisetracker-854091fc1e0c.herokuapp.com', // Your backend URL
-    'https://mern-exercise-tracker-five.vercel.app', // Your frontend URL
-    // Add any other origins you want to allow here
-  ],
+  origin: 'https://mern-exercise-tracker-five.vercel.app', // Your frontend URL
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 };
 
 //tells express app to use cors middleware and the built-in express.json() middleware
-app.use(cors(corsOptions));
+app.use(cors({origin: 'https://mern-exercise-tracker-five.vercel.app'}));
 app.use(express.json());
 //"middleware" are functions executed in between receiving an incoming HTTP request 
 //and sending the response. These functions can modify the request or response, 
