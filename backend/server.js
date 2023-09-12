@@ -16,7 +16,11 @@ const port = process.env.PORT || 5000;
 
 const corsOptions = {
   //https://mern-exercise-tracker-five.vercel.app
-  origin: 'https://mern-exercisetracker-854091fc1e0c.herokuapp.com',
+  origin: [
+    'https://mern-exercisetracker-854091fc1e0c.herokuapp.com', // Your backend URL
+    'https://mern-exercise-tracker-five.vercel.app', // Your frontend URL
+    // Add any other origins you want to allow here
+  ],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 };
 
