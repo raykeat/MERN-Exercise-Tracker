@@ -5,7 +5,7 @@ This exercise tracker allows users to create various exercise logs, adding descr
 
 Overall, simple but insightful project that introduced the MERN Stack, as well as how to integrate frontend, backend, and databases.
 
-#Deployment
+# Deployment
 This app is deployed using Vercel for the FrontEnd and Heroku for the BackEnd Server.
 1. Frontend (Vercel) - https://mern-exercise-tracker-five.vercel.app/
 2. Backend (Heroku) - https://mern-exercisetracker-854091fc1e0c.herokuapp.com/
